@@ -1,94 +1,170 @@
-import React, { PureComponent } from 'react'
+import React, { Fragment, PureComponent } from 'react'
 import { connect } from 'react-redux'
-import { Col, Input, Row } from 'reactstrap'
-import Task from './Task'
 import Navigation from '../Navigation/Navigation'
-
 import { translate } from 'react-i18next'
 import { createTask, searchUserTasks, showError, updateTask, updateUserTasks } from '../actions/taskActions'
-import { handleDueDateOf, ordered } from '../utils/taskUtils'
-import SpinnerView from '../SpinnerView'
-import { isBrowser } from 'react-device-detect'
 
 class TaskView extends PureComponent {
 
-    componentDidMount() {
-        const { searchUserTasks, updateUserTasks, showError, history } = this.props
-
-        searchUserTasks()
-            .then((res) => updateUserTasks({ $push: ordered(res.payload.body) }))
-            .catch((err) => {
-                if (err.status === 401) {
-                    history.push('/login')
-                } else {
-                    showError(err)
-                }
-            })
-    }
-
-    onAddNewTask(e) {
-        const input = e.target
-        if (e.key === 'Enter' && input.value.trim() !== '') {
-            const { updateUserTasks, createTask } = this.props
-            const task = handleDueDateOf({ name: input.value.trim() })
-            input.disabled = true
-
-            createTask(task)
-                .then((res) => {
-                    updateUserTasks({ $unshift: [res.payload.body] })
-                    input.value = ''
-                    input.disabled = false
-                    this.taskNameInput.focus()
-                })
-                .catch((err) => {
-                    showError(err)
-                    input.disabled = false
-                })
-        }
-    }
-
-    onTaskUpdate = async(taskId, fieldName, fieldValue) => {
-        const { updateUserTasks, tasks } = this.props
-        const updateQuery = { [fieldName]: { $set: fieldValue } }
-        const taskIndex = tasks.findIndex(t => t.id === taskId)
-
-        await updateUserTasks({ [taskIndex]: updateQuery })
-    }
-
-    saveTask = (taskId) => {
-        const { updateTask, showError } = this.props
-        let task = this.props.tasks.find(t => t.id === taskId)
-        updateTask(taskId, task)
-            .catch((err) => showError(err))
-    }
-
     render() {
-        const { tasks, t, initialized } = this.props
-        // FIXME: it's not a good place to implement here
-        if (initialized) {
-            return (
-                <div>
-                    <Navigation history={this.props.history}/>
-                    <div>
-                        <Row style={{ marginTop: '10px' }}>
-                            <Col>
-                                <Input type="text" placeholder={t('new.task')}
-                                       onKeyPress={this.onAddNewTask.bind(this)} autoFocus={isBrowser}
-                                       innerRef={input => this.taskNameInput = input}/>
-                            </Col>
-                        </Row>
-                        <div style={{ marginTop: '10px' }}>
-                            {tasks.filter(t => !t.closed).map(task =>
-                                <Task key={task.id} id={task.id} name={task.name} description={task.description}
-                                      dueDate={task.dueDate} onTaskUpdate={this.onTaskUpdate} saveTask={this.saveTask}/>
-                            )}
+        return (
+            <Fragment>
+                <Navigation history={this.props.history}/>
+
+                <div className="row">
+
+                    <div className="col-lg-3">
+
+                        <h1 className="my-4">Shop Name</h1>
+                        <div className="list-group">
+                            <a href="#" className="list-group-item">Category 1</a>
+                            <a href="#" className="list-group-item">Category 2</a>
+                            <a href="#" className="list-group-item">Category 3</a>
                         </div>
+
                     </div>
+
+                    <div className="col-lg-9">
+
+                        <div id="carouselExampleIndicators" className="carousel slide my-4" data-ride="carousel">
+                            <ol className="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div className="carousel-inner" role="listbox">
+                                <div className="carousel-item active">
+                                    <img className="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide"/>
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide"/>
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide"/>
+                                </div>
+                            </div>
+                            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span className="sr-only">Previous</span>
+                            </a>
+                            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span className="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <div className="row">
+
+                            <div className="col-lg-4 col-md-6 mb-4">
+                                <div className="card h-100">
+                                    <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
+                                    <div className="card-body">
+                                        <h4 className="card-title">
+                                            <a href="#">Item One</a>
+                                        </h4>
+                                        <h5>$24.99</h5>
+                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                                            aspernatur!</p>
+                                    </div>
+                                    <div className="card-footer">
+                                        <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 col-md-6 mb-4">
+                                <div className="card h-100">
+                                    <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
+                                    <div className="card-body">
+                                        <h4 className="card-title">
+                                            <a href="#">Item Two</a>
+                                        </h4>
+                                        <h5>$24.99</h5>
+                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                                            aspernatur! Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div className="card-footer">
+                                        <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 col-md-6 mb-4">
+                                <div className="card h-100">
+                                    <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
+                                    <div className="card-body">
+                                        <h4 className="card-title">
+                                            <a href="#">Item Three</a>
+                                        </h4>
+                                        <h5>$24.99</h5>
+                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                                            aspernatur!</p>
+                                    </div>
+                                    <div className="card-footer">
+                                        <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 col-md-6 mb-4">
+                                <div className="card h-100">
+                                    <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
+                                    <div className="card-body">
+                                        <h4 className="card-title">
+                                            <a href="#">Item Four</a>
+                                        </h4>
+                                        <h5>$24.99</h5>
+                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                                            aspernatur!</p>
+                                    </div>
+                                    <div className="card-footer">
+                                        <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 col-md-6 mb-4">
+                                <div className="card h-100">
+                                    <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
+                                    <div className="card-body">
+                                        <h4 className="card-title">
+                                            <a href="#">Item Five</a>
+                                        </h4>
+                                        <h5>$24.99</h5>
+                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                                            aspernatur! Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div className="card-footer">
+                                        <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 col-md-6 mb-4">
+                                <div className="card h-100">
+                                    <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
+                                    <div className="card-body">
+                                        <h4 className="card-title">
+                                            <a href="#">Item Six</a>
+                                        </h4>
+                                        <h5>$24.99</h5>
+                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                                            aspernatur!</p>
+                                    </div>
+                                    <div className="card-footer">
+                                        <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-            )
-        } else {
-            return <SpinnerView/>
-        }
+
+            </Fragment>
+        )
     }
 }
 

@@ -1,33 +1,39 @@
 import React, { PureComponent } from 'react'
-import { Nav, Navbar, NavbarBrand, NavItem } from 'reactstrap'
-import logo from '../logo.png'
 import { translate } from 'react-i18next'
 import { withCookies } from 'react-cookie'
-import { COOKIE_DOMAIN, COOKIE_PATH } from '../const'
 
 class Navigation extends PureComponent {
 
     render() {
-        const { t } = this.props
         return (
-            <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">
-                    <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="Motive Logo"/>
-                    <span> {t('my.tasks')}</span>
-                </NavbarBrand>
-                <Nav className="ml-auto" navbar>
-                    <NavItem>
-                        <a onClick={this.handleLogout} style={{ cursor: 'pointer' }}>{t('logout')}</a>
-                    </NavItem>
-                </Nav>
-            </Navbar>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div className="container">
+                    <a className="navbar-brand" href="#">Start Bootstrap</a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"/>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarResponsive">
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item active">
+                                <a className="nav-link" href="#">Home
+                                    <span className="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">About</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Services</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         )
-    }
-
-    handleLogout = () => {
-        const { cookies, history } = this.props
-        cookies.remove('SESSION', { domain: COOKIE_DOMAIN, path: COOKIE_PATH })
-        history.push('/login')
     }
 }
 
