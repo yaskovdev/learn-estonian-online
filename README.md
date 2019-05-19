@@ -1,2 +1,2 @@
-# learn-estonian-online
+# Learn Estonian Online
 Currently a sandbox
