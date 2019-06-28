@@ -1,37 +1,45 @@
 import React, { PureComponent } from 'react'
 import { translate } from 'react-i18next'
 import { withCookies } from 'react-cookie'
+import { Link } from 'react-router-dom'
 
 class Navigation extends PureComponent {
 
+    state = { page: 'home' }
+
     render() {
         const { t } = this.props
+        const { page } = this.state
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <div className="container">
-                    <a className="navbar-brand" href="#">{t('title')}</a>
+                    <Link className="navbar-brand" to="/">{t('title')}</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"/>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
-                            <li className="nav-item active">
-                                <a className="nav-link" href="#">{t('page.home')}
-                                    <span className="sr-only">{t('page.current')}</span>
-                                </a>
+                            <li className={`nav-item ${page === 'home' ? 'active' : ''}`}>
+                                <Link className="nav-link" onClick={() => this.handleClick('home')} to={'/'}>
+                                    {t('page.home')}
+                                </Link>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">{t('page.blog')}</a>
+                            <li className={`nav-item ${page === 'blog' ? 'active' : ''}`}>
+                                <Link className="nav-link" onClick={() => this.handleClick('blog')} to={'/blog'}>{t('page.blog')}</Link>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">{t('page.about')}</a>
+                            <li className={`nav-item ${page === 'about' ? 'active' : ''}`}>
+                                <Link className="nav-link" onClick={() => this.handleClick('about')} to={'/about'}>{t('page.about')}</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         )
+    }
+
+    handleClick = (page) => {
+        this.setState({ page })
     }
 }
 

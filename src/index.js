@@ -2,9 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { CookiesProvider } from 'react-cookie'
-import { Provider } from 'react-redux'
-import { applyMiddleware, createStore } from 'redux'
-import promise from 'redux-promise'
 import { I18nextProvider } from 'react-i18next'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import moment from 'moment'
@@ -13,12 +10,8 @@ import 'moment/locale/zh-tw'
 import 'font-awesome/css/font-awesome.min.css'
 import './index.css'
 import registerServiceWorker from './registerServiceWorker'
-import rootReducer from './reducers'
 import i18n from './i18n'
 import Routes from './routes'
-
-const enhancer = applyMiddleware(promise)
-const store = createStore(rootReducer, enhancer)
 
 const setUpLocale = () => {
     moment.updateLocale('en', {
@@ -61,12 +54,10 @@ setUpLocale()
 
 ReactDOM.render(
     <CookiesProvider>
-        <Provider store={store}>
-            <I18nextProvider i18n={i18n}>
-                <BrowserRouter>
-                    <Routes/>
-                </BrowserRouter>
-            </I18nextProvider>
-        </Provider>
+        <I18nextProvider i18n={i18n}>
+            <BrowserRouter>
+                <Routes/>
+            </BrowserRouter>
+        </I18nextProvider>
     </CookiesProvider>, document.getElementById('root'))
 registerServiceWorker()

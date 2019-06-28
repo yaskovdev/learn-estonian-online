@@ -14,7 +14,10 @@ i18n.use(LanguageDetector).init({
                 'page.home': 'Home',
                 'page.blog': 'Blog',
                 'page.about': 'About',
-                'lesson': 'Lesson {{number}}'
+                'lesson': 'Lesson {{number}}',
+                'task': 'Task {{number}}',
+                'text': 'Text {{number}}',
+                'article': 'Article {{number}}'
             }
         },
         ru: {
@@ -28,7 +31,10 @@ i18n.use(LanguageDetector).init({
                 'page.home': 'Главная',
                 'page.blog': 'Блог',
                 'page.about': 'О себе',
-                'lesson': 'Урок {{number}}'
+                'lesson': 'Урок {{number}}',
+                'task': 'Задание {{number}}',
+                'text': 'Текст {{number}}',
+                'article': 'Статья {{number}}'
             }
         }
     },

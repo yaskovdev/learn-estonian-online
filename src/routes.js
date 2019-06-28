@@ -1,27 +1,36 @@
-import React, { Fragment, PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import { Route } from 'react-router-dom'
 import { withCookies } from 'react-cookie'
 import { Container } from 'reactstrap'
 import { translate } from 'react-i18next'
 
 import './App.css'
-import TaskView from './Tasks/TaskView'
+import LessonsView from './views/LessonsView'
+import Navigation from './Navigation/Navigation'
+import BlogView from './views/BlogView'
+import AboutView from './views/AboutView'
+import TasksView from './views/TasksView'
+import TextsView from './views/TextsView'
 
 class Routes extends PureComponent {
 
     render() {
         return (
-            <Fragment>
-                <Container>
-                    <Route exact={true} path="/" component={TaskView}/>
-                    <Route path="/login" component={TaskView}/>
+            <div className="main-container">
+                <Navigation history={this.props.history}/>
+                <Container className="content-container">
+                    <Route exact={true} path="/" component={LessonsView}/>
+                    <Route exact={true} path="/tasks" component={TasksView}/>
+                    <Route exact={true} path="/texts" component={TextsView}/>
+                    <Route exact={true} path="/blog" component={BlogView}/>
+                    <Route exact={true} path="/about" component={AboutView}/>
                 </Container>
-                <footer className="py-5 bg-dark">
-                    <div className="container">
-                        <p className="m-0 text-center text-white">Copyright &copy; Learn Estonian Online 2019</p>
-                    </div>
+                <footer className="py-5 bg-light">
+                    <Container>
+                        <p className="m-0 text-center">Copyright &copy; Learn Estonian Online 2019</p>
+                    </Container>
                 </footer>
-            </Fragment>
+            </div>
         )
     }
 }
