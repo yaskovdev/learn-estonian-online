@@ -11,7 +11,7 @@ class Navigation extends PureComponent {
         const { t } = this.props
         const { page } = this.state
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <Link className="navbar-brand" to="/">{t('title')}</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
