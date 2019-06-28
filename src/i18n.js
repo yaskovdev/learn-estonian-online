@@ -5,7 +5,7 @@ i18n.use(LanguageDetector).init({
     resources: {
         en: {
             translations: {
-                'title': 'Estonian online',
+                'title': 'Estonian Online',
                 'categories': 'Categories',
                 'category.lessons': 'Lessons',
                 'category.tasks': 'Tasks',

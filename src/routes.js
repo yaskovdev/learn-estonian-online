@@ -13,12 +13,12 @@ class Routes extends PureComponent {
         return (
             <Fragment>
                 <Container>
-                    <Route exact={true} path="/learn-estonian-online/" component={TaskView}/>
-                    <Route path="/login/learn-estonian-online/" component={TaskView}/>
+                    <Route exact={true} path="/" component={TaskView}/>
+                    <Route path="/login" component={TaskView}/>
                 </Container>
-                <footer class="py-5 bg-dark">
-                    <div class="container">
-                        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+                <footer className="py-5 bg-dark">
+                    <div className="container">
+                        <p className="m-0 text-center text-white">Copyright &copy; Learn Estonian Online 2019</p>
                     </div>
                 </footer>
             </Fragment>
