@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { translate } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import CategoriesView from './CategoriesView'
 
 class LessonsView extends PureComponent {
 
@@ -10,12 +11,7 @@ class LessonsView extends PureComponent {
             <div className="row">
 
                 <div className="col-lg-3">
-                    <h1 className="my-4">{t('categories')}</h1>
-                    <div className="list-group">
-                        <Link className="list-group-item" to="/">{t('category.lessons')}</Link>
-                        <Link className="list-group-item" to="/exercises">{t('category.exercises')}</Link>
-                        <Link className="list-group-item" to="/texts">{t('category.texts')}</Link>
-                    </div>
+                    <CategoriesView/>
                 </div>
 
                 <div className="col-lg-9">
@@ -33,7 +29,7 @@ class LessonsView extends PureComponent {
                                         </Link>
                                     </h4>
                                     <p className="card-text">
-                                        Возьмем оставшиеся пять падежей прямо сейчас.
+                                        Возьмем оставшиеся пять падежей прямо сейчас
                                     </p>
                                 </div>
                             </div>

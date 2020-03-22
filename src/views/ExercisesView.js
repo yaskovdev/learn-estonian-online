@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { translate } from 'react-i18next'
+import CategoriesView from './CategoriesView'
 import { Link } from 'react-router-dom'
 
 class ExercisesView extends PureComponent {
@@ -10,56 +11,30 @@ class ExercisesView extends PureComponent {
             <div className="row">
 
                 <div className="col-lg-3">
-                    <h1 className="my-4">{t('categories')}</h1>
-                    <div className="list-group">
-                        <Link className="list-group-item" to="/">{t('category.lessons')}</Link>
-                        <Link className="list-group-item" to="/exercises">{t('category.exercises')}</Link>
-                        <Link className="list-group-item" to="/texts">{t('category.texts')}</Link>
-                    </div>
+                    <CategoriesView/>
                 </div>
 
                 <div className="col-lg-9">
-
                     <div className="row my-4">
 
                         <div className="col-lg-4 col-md-6 mb-4">
                             <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
+                                <Link to={'/exercises/6'}>
+                                    <img className="card-img-top" src="https://ak4.picdn.net/shutterstock/videos/4689104/thumb/1.jpg" alt=""/>
+                                </Link>
                                 <div className="card-body">
                                     <h4 className="card-title">
-                                        <a href="#">{t('task', { number: 1 })}</a>
+                                        <Link to={'/exercises/6'}>
+                                            {t('task', { number: 6 })}
+                                        </Link>
                                     </h4>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                                        aspernatur!</p>
+                                    <p className="card-text">
+                                        Домашнее задание к шестому уроку
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-6 mb-4">
-                            <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
-                                <div className="card-body">
-                                    <h4 className="card-title">
-                                        <a href="#">{t('task', { number: 2 })}</a>
-                                    </h4>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                                        aspernatur! Lorem ipsum dolor sit amet.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6 mb-4">
-                            <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
-                                <div className="card-body">
-                                    <h4 className="card-title">
-                                        <a href="#">{t('task', { number: 3 })}</a>
-                                    </h4>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                                        aspernatur!</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
