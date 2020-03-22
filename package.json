@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://estonian.yaskovdev.com",
   "dependencies": {
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.3.1",
     "font-awesome": "4.7.0",
     "i18next": "11.6.0",
     "i18next-browser-languagedetector": "2.2.3",
