@@ -13,7 +13,7 @@ class TextsView extends PureComponent {
                     <h1 className="my-4">{t('categories')}</h1>
                     <div className="list-group">
                         <Link className="list-group-item" to="/">{t('category.lessons')}</Link>
-                        <Link className="list-group-item" to="/tasks">{t('category.tasks')}</Link>
+                        <Link className="list-group-item" to="/exercises">{t('category.exercises')}</Link>
                         <Link className="list-group-item" to="/texts">{t('category.texts')}</Link>
                     </div>
                 </div>

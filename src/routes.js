@@ -9,7 +9,7 @@ import LessonsView from './views/LessonsView'
 import Navigation from './Navigation/Navigation'
 import BlogView from './views/BlogView'
 import AboutView from './views/AboutView'
-import TasksView from './views/TasksView'
+import ExercisesView from './views/ExercisesView'
 import TextsView from './views/TextsView'
 import Lesson6View from './views/lessons/Lesson6View'
 
@@ -21,7 +21,7 @@ class Routes extends PureComponent {
                 <Navigation history={this.props.history}/>
                 <Container>
                     <Route exact={true} path="/" component={LessonsView}/>
-                    <Route exact={true} path="/tasks" component={TasksView}/>
+                    <Route exact={true} path="/exercises" component={ExercisesView}/>
                     <Route exact={true} path="/texts" component={TextsView}/>
                     <Route exact={true} path="/blog" component={BlogView}/>
                     <Route exact={true} path="/about" component={AboutView}/>

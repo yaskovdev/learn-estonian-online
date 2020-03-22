@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { translate } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-class TasksView extends PureComponent {
+class ExercisesView extends PureComponent {
 
     render() {
         const { t } = this.props
@@ -13,7 +13,7 @@ class TasksView extends PureComponent {
                     <h1 className="my-4">{t('categories')}</h1>
                     <div className="list-group">
                         <Link className="list-group-item" to="/">{t('category.lessons')}</Link>
-                        <Link className="list-group-item" to="/tasks">{t('category.tasks')}</Link>
+                        <Link className="list-group-item" to="/exercises">{t('category.exercises')}</Link>
                         <Link className="list-group-item" to="/texts">{t('category.texts')}</Link>
                     </div>
                 </div>
@@ -67,4 +67,4 @@ class TasksView extends PureComponent {
     }
 }
 
-export default translate('translations')(TasksView)
+export default translate('translations')(ExercisesView)
