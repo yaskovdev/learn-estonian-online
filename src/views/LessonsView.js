@@ -89,10 +89,14 @@ class LessonsView extends PureComponent {
 
                         <div className="col-lg-4 col-md-6 mb-4">
                             <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
+                                <Link to={'/lessons/6'}>
+                                    <img className="card-img-top" src="http://placehold.it/700x400" alt=""/>
+                                </Link>
                                 <div className="card-body">
                                     <h4 className="card-title">
-                                        <a href="#">{t('lesson', { number: 6 })}</a>
+                                        <Link to={'/lessons/6'}>
+                                            {t('lesson', { number: 6 })}
+                                        </Link>
                                     </h4>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
                                         aspernatur!</p>

@@ -11,6 +11,7 @@ import BlogView from './views/BlogView'
 import AboutView from './views/AboutView'
 import TasksView from './views/TasksView'
 import TextsView from './views/TextsView'
+import Lesson6View from './views/lessons/Lesson6View'
 
 class Routes extends PureComponent {
 
@@ -24,6 +25,7 @@ class Routes extends PureComponent {
                     <Route exact={true} path="/texts" component={TextsView}/>
                     <Route exact={true} path="/blog" component={BlogView}/>
                     <Route exact={true} path="/about" component={AboutView}/>
+                    <Route exact={true} path="/lessons/6" component={Lesson6View}/>
                 </Container>
                 <footer className="py-5 bg-dark">
                     <Container>
