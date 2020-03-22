@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
 import { Route } from 'react-router-dom'
-import { withCookies } from 'react-cookie'
 import { Container } from 'reactstrap'
 import { translate } from 'react-i18next'
 
 import './App.css'
 import LessonsView from './views/LessonsView'
-import Navigation from './Navigation/Navigation'
+import Navigation from './views/components/Navigation'
 import BlogView from './views/BlogView'
 import AboutView from './views/AboutView'
 import ExercisesView from './views/ExercisesView'
@@ -39,4 +38,4 @@ class Routes extends PureComponent {
     }
 }
 
-export default withCookies(translate('translations')(Routes))
+export default translate('translations')(Routes)

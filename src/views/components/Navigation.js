@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { translate } from 'react-i18next'
-import { withCookies } from 'react-cookie'
 import { Link } from 'react-router-dom'
 
 class Navigation extends PureComponent {
@@ -17,7 +16,7 @@ class Navigation extends PureComponent {
                 <div className="container">
                     <Link className="navbar-brand" to="/">{t('title')}</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"/>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
@@ -45,4 +44,4 @@ class Navigation extends PureComponent {
     }
 }
 
-export default withCookies(translate('translations')(Navigation))
+export default translate('translations')(Navigation)

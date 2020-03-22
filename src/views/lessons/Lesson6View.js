@@ -1,7 +1,6 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { translate } from 'react-i18next'
-import ReactMarkdown from 'react-markdown'
-import CategoriesView from '../CategoriesView'
+import MarkdownPage from '../components/MarkdownPage'
 
 const source = `
 Inimene õpib, kuni elab. Как говорят по-русски, век живи — век учись. Конечно, познать эстонский язык за 10 уроков невозможно, ведь 
@@ -755,31 +754,4 @@ Näide:
  Я по национальности русский.
 `
 
-class Lesson6View extends PureComponent {
-
-    render() {
-        const { t } = this.props
-        return (
-            <div className="row">
-
-                <div className="col-lg-3">
-                    <CategoriesView/>
-                </div>
-
-                <div className="col-lg-9">
-
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h1 className="my-4">{t('lesson', { number: 6 })}</h1>
-                        </div>
-                        <div className="col-lg-12">
-                            <ReactMarkdown source={source} escapeHtml={false}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
-
-export default translate('translations')(Lesson6View)
+export default translate('translations')(props => <MarkdownPage title={props.t('lesson', { number: 6 })} source={source}/>)

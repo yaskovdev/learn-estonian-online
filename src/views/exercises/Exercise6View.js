@@ -1,7 +1,6 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { translate } from 'react-i18next'
-import ReactMarkdown from 'react-markdown'
-import CategoriesView from '../CategoriesView'
+import MarkdownPage from '../components/MarkdownPage'
 
 const source = `
 ### Harjutus 1
@@ -55,31 +54,4 @@ Pöörama, pöörata, pöörab и Keerama, keerata, keerab
 __Ees, ette, keset, juurde, mööda, ääres, üle, all. alla, alt, sees, sisse, kõrval, otsas, kaudu, peal, peale.__
 `
 
-class Exercise6View extends PureComponent {
-
-    render() {
-        const { t } = this.props
-        return (
-            <div className="row">
-
-                <div className="col-lg-3">
-                    <CategoriesView/>
-                </div>
-
-                <div className="col-lg-9">
-
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h1 className="my-4">{t('task', { number: 6 })}</h1>
-                        </div>
-                        <div className="col-lg-12">
-                            <ReactMarkdown source={source} escapeHtml={false}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
-
-export default translate('translations')(Exercise6View)
+export default translate('translations')(props => <MarkdownPage title={props.t('task', { number: 6 })} source={source}/>)

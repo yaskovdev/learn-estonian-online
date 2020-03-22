@@ -1,91 +1,44 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { translate } from 'react-i18next'
-import CategoriesView from './CategoriesView'
+import Categories from './components/Categories'
+import TextCard from './components/TextCard'
 
-class TextsView extends PureComponent {
+const TextsView = () => (
+    <div className="row">
 
-    render() {
-        const { t } = this.props
-        return (
-            <div className="row">
+        <div className="col-lg-3">
+            <Categories/>
+        </div>
 
-                <div className="col-lg-3">
-                    <CategoriesView/>
+        <div className="col-lg-9">
+            <div className="row my-4">
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <TextCard number="1" imageUrl="http://placehold.it/700x400"
+                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
                 </div>
 
-                <div className="col-lg-9">
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <TextCard number="2" imageUrl="http://placehold.it/700x400"
+                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
+                </div>
 
-                    <div className="row my-4">
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <TextCard number="3" imageUrl="http://placehold.it/700x400"
+                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
+                </div>
 
-                        <div className="col-lg-4 col-md-6 mb-4">
-                            <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
-                                <div className="card-body">
-                                    <h4 className="card-title">
-                                        <a href="#">{t('text', { number: 1 })}</a>
-                                    </h4>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                                        aspernatur!</p>
-                                </div>
-                            </div>
-                        </div>
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <TextCard number="4" imageUrl="http://placehold.it/700x400"
+                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
+                </div>
 
-                        <div className="col-lg-4 col-md-6 mb-4">
-                            <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
-                                <div className="card-body">
-                                    <h4 className="card-title">
-                                        <a href="#">{t('text', { number: 2 })}</a>
-                                    </h4>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                                        aspernatur! Lorem ipsum dolor sit amet.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6 mb-4">
-                            <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
-                                <div className="card-body">
-                                    <h4 className="card-title">
-                                        <a href="#">{t('text', { number: 3 })}</a>
-                                    </h4>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                                        aspernatur!</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6 mb-4">
-                            <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
-                                <div className="card-body">
-                                    <h4 className="card-title">
-                                        <a href="#">{t('text', { number: 4 })}</a>
-                                    </h4>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                                        aspernatur!</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6 mb-4">
-                            <div className="card h-100">
-                                <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></a>
-                                <div className="card-body">
-                                    <h4 className="card-title">
-                                        <a href="#">{t('text', { number: 5 })}</a>
-                                    </h4>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                                        aspernatur! Lorem ipsum dolor sit amet.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <TextCard number="5" imageUrl="http://placehold.it/700x400"
+                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
                 </div>
             </div>
-        )
-    }
-}
+        </div>
+    </div>
+)
 
 export default translate('translations')(TextsView)
