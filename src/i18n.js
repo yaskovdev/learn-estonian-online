@@ -1,7 +1,23 @@
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
-i18n.use(LanguageDetector).init({
+/**
+ * Always returns Russian as a language since currently all the lessons are in Russian anyways so there is no point
+ * to partially translate the Web site into English. In future when the lessons will be available in English, the dummy
+ * detector will be removed.
+ */
+const dummyLanguageDetector = {
+    name: 'dummyLanguageDetector',
+
+    lookup() {
+        return 'ru'
+    }
+}
+
+const languageDetector = new LanguageDetector()
+languageDetector.addDetector(dummyLanguageDetector)
+
+i18n.use(languageDetector).init({
     resources: {
         en: {
             translations: {
@@ -56,7 +72,7 @@ i18n.use(LanguageDetector).init({
     },
 
     detection: {
-        order: ['navigator', 'querystring', 'cookie', 'localStorage', 'htmlTag', 'path', 'subdomain']
+        order: ['dummyLanguageDetector', 'navigator', 'querystring', 'cookie', 'localStorage', 'htmlTag', 'path', 'subdomain']
     }
 })
 
