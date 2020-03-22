@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import { Container } from 'reactstrap'
 import { translate } from 'react-i18next'
 
@@ -38,4 +38,4 @@ class Routes extends PureComponent {
     }
 }
 
-export default translate('translations')(Routes)
+export default withRouter(translate('translations')(Routes))
