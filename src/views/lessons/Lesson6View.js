@@ -754,4 +754,4 @@ Näide:
  Я по национальности русский.
 `
 
-export default translate('translations')(props => <MarkdownPage title={props.t('lesson', { number: 6 })} source={source}/>)
+export default translate()(props => <MarkdownPage title={props.t('lesson', { number: 6 })} source={source}/>)

@@ -15,4 +15,4 @@ const Categories = ({ t }) => (
     </Fragment>
 )
 
-export default translate('translations')(Categories)
+export default translate()(Categories)

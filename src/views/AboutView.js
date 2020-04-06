@@ -64,4 +64,4 @@ const AboutView = ({ t }) => (
     </div>
 )
 
-export default translate('translations')(AboutView)
+export default translate()(AboutView)

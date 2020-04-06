@@ -38,4 +38,4 @@ class Routes extends PureComponent {
     }
 }
 
-export default withRouter(translate('translations')(Routes))
+export default withRouter(translate()(Routes))

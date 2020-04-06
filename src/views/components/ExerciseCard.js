@@ -16,4 +16,4 @@ const ExerciseCard = ({ number, imageUrl, description, t }) => (
     </div>
 )
 
-export default translate('translations')(ExerciseCard)
+export default translate()(ExerciseCard)

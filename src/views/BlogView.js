@@ -45,4 +45,4 @@ const BlogView = () => (
     </div>
 )
 
-export default translate('translations')(BlogView)
+export default translate()(BlogView)

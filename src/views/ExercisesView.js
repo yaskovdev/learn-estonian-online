@@ -23,4 +23,4 @@ const ExercisesView = () => (
     </div>
 )
 
-export default translate('translations')(ExercisesView)
+export default translate()(ExercisesView)

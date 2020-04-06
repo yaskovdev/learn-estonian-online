@@ -16,4 +16,4 @@ const TextCard = ({ number, imageUrl, description, t }) => (
     </div>
 )
 
-export default translate('translations')(TextCard)
+export default translate()(TextCard)

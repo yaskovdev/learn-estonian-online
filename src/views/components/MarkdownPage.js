@@ -24,4 +24,4 @@ const MarkdownPage = ({ title, source }) => (
     </div>
 )
 
-export default translate('translations')(MarkdownPage)
+export default translate()(MarkdownPage)
