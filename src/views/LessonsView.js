@@ -11,6 +11,7 @@ import lesson7 from '../lesson-7-card.jpg'
 import lesson8 from '../lesson-8-card.jpg'
 import lesson9 from '../lesson-9-card.jpg'
 import lesson10 from '../lesson-10-card.jpg'
+import lesson11 from '../lesson-11-card.jpg'
 
 const LessonsView = () => (
     <div className="row">
@@ -41,6 +42,8 @@ const LessonsView = () => (
                 <LessonCard number="9" imageSrc={lesson9}
                     description="Возьмем оставшиеся пять падежей прямо сейчас"/>
                 <LessonCard number="10" imageSrc={lesson10}
+                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                <LessonCard number="11" imageSrc={lesson11}
                     description="Возьмем оставшиеся пять падежей прямо сейчас"/>
 
             </div>
