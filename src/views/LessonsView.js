@@ -8,6 +8,9 @@ import lesson3 from '../lesson-3-card.jpg'
 import lesson4 from '../lesson-4-card.jpg'
 import lesson5 from '../lesson-5-card.jpg'
 import lesson7 from '../lesson-7-card.jpg'
+import lesson8 from '../lesson-8-card.jpg'
+import lesson9 from '../lesson-9-card.jpg'
+import lesson10 from '../lesson-10-card.jpg'
 
 const LessonsView = () => (
     <div className="row">
@@ -32,6 +35,12 @@ const LessonsView = () => (
                 <LessonCard number="6" imageSrc="https://shortpixel.com/img/slider/berries-optimized-by-shortpixel.jpg"
                     description="Возьмем оставшиеся пять падежей прямо сейчас"/>
                 <LessonCard number="7" imageSrc={lesson7}
+                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                <LessonCard number="8" imageSrc={lesson8}
+                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                <LessonCard number="9" imageSrc={lesson9}
+                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                <LessonCard number="10" imageSrc={lesson10}
                     description="Возьмем оставшиеся пять падежей прямо сейчас"/>
 
             </div>
