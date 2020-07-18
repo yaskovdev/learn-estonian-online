@@ -31,39 +31,39 @@ const LessonsView = () => (
             <div className="row my-4">
 
                 <LessonCard number="1" imageSrc={lesson1}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Алфавит. Первые слова"/>
                 <LessonCard number="2" imageSrc={lesson2}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Личные местоимения"/>
                 <LessonCard number="3" imageSrc={lesson3}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Спряжение глаголов настоящего времени"/>
                 <LessonCard number="4" imageSrc={lesson4}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Вопросительные слова"/>
                 <LessonCard number="5" imageSrc={lesson5}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Падежи"/>
                 <LessonCard number="6" imageSrc={lesson6}
                     description="Возьмем оставшиеся пять падежей прямо сейчас"/>
                 <LessonCard number="7" imageSrc={lesson7}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Падежи места, часть II. Города и страны"/>
                 <LessonCard number="8" imageSrc={lesson8}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Падеж Saav"/>
                 <LessonCard number="9" imageSrc={lesson9}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Предлоги и послелоги"/>
                 <LessonCard number="10" imageSrc={lesson10}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Числительные. Arvsõnad"/>
                 <LessonCard number="11" imageSrc={lesson11}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Продолжаем говорить о предлогах и послелогах"/>
                 <LessonCard number="12" imageSrc={lesson12}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Прилагательные"/>
                 <LessonCard number="13" imageSrc={lesson13}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Продолжаем говорить о прилагательных"/>
                 <LessonCard number="14" imageSrc={lesson14}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Более подробно про инфинитивы"/>
                 <LessonCard number="15" imageSrc={lesson15}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Модальные глаголы"/>
                 <LessonCard number="16" imageSrc={lesson16}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Множественное число"/>
                 <LessonCard number="17" imageSrc={lesson17}
-                    description="Возьмем оставшиеся пять падежей прямо сейчас"/>
+                    description="Местоимения"/>
             </div>
         </div>
     </div>
