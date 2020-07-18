@@ -10,7 +10,6 @@ class Navigation extends PureComponent {
         const { t } = this.props
         const { page } = this.state
         const showBlog = false
-        const showAbout = false
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
@@ -29,9 +28,9 @@ class Navigation extends PureComponent {
                             {showBlog && <li className={`nav-item ${page === 'blog' ? 'active' : ''}`}>
                                 <Link className="nav-link" onClick={() => this.handleClick('blog')} to={'/blog'}>{t('page.blog')}</Link>
                             </li>}
-                            {showAbout && <li className={`nav-item ${page === 'about' ? 'active' : ''}`}>
+                            <li className={`nav-item ${page === 'about' ? 'active' : ''}`}>
                                 <Link className="nav-link" onClick={() => this.handleClick('about')} to={'/about'}>{t('page.about')}</Link>
-                            </li>}
+                            </li>
                         </ul>
                     </div>
                 </div>
