@@ -44,6 +44,11 @@ import Exercise14View from './views/exercises/Exercise14View'
 import Exercise15View from './views/exercises/Exercise15View'
 import Exercise16View from './views/exercises/Exercise16View'
 import Exercise17View from './views/exercises/Exercise17View'
+import Text1View from './views/texts/Text1View'
+import Text2View from './views/texts/Text2View'
+import Text3View from './views/texts/Text3View'
+import Text4View from './views/texts/Text4View'
+import Text5View from './views/texts/Text5View'
 
 class Routes extends PureComponent {
 
@@ -91,6 +96,11 @@ class Routes extends PureComponent {
                     <Route exact={true} path="/exercises/15" component={Exercise15View}/>
                     <Route exact={true} path="/exercises/16" component={Exercise16View}/>
                     <Route exact={true} path="/exercises/17" component={Exercise17View}/>
+                    <Route exact={true} path="/texts/1" component={Text1View}/>
+                    <Route exact={true} path="/texts/2" component={Text2View}/>
+                    <Route exact={true} path="/texts/3" component={Text3View}/>
+                    <Route exact={true} path="/texts/4" component={Text4View}/>
+                    <Route exact={true} path="/texts/5" component={Text5View}/>
                 </Container>
                 <footer className="py-5 bg-dark">
                     <Container>

@@ -13,28 +13,23 @@ const TextsView = () => (
         <div className="col-lg-9">
             <div className="row my-4">
                 <div className="col-lg-4 col-md-6 mb-4">
-                    <TextCard number="1" imageUrl="http://placehold.it/700x400"
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
+                    <TextCard number="1" imageUrl="http://placehold.it/700x400"/>
                 </div>
 
                 <div className="col-lg-4 col-md-6 mb-4">
-                    <TextCard number="2" imageUrl="http://placehold.it/700x400"
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
+                    <TextCard number="2" imageUrl="http://placehold.it/700x400"/>
                 </div>
 
                 <div className="col-lg-4 col-md-6 mb-4">
-                    <TextCard number="3" imageUrl="http://placehold.it/700x400"
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
+                    <TextCard number="3" imageUrl="http://placehold.it/700x400"/>
                 </div>
 
                 <div className="col-lg-4 col-md-6 mb-4">
-                    <TextCard number="4" imageUrl="http://placehold.it/700x400"
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
+                    <TextCard number="4" imageUrl="http://placehold.it/700x400"/>
                 </div>
 
                 <div className="col-lg-4 col-md-6 mb-4">
-                    <TextCard number="5" imageUrl="http://placehold.it/700x400"
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"/>
+                    <TextCard number="5" imageUrl="http://placehold.it/700x400"/>
                 </div>
             </div>
         </div>
