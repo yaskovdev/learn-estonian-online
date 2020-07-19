@@ -33,53 +33,49 @@ Oleviku eitav vorm.
 Берем глагол в первом лице ед.ч. и убираем присущее ему окончание –N. Получаем так сказать основу первого лица. Перед получившимся словом пишем отрицательную частицу EI, и это будет отрицательная форма глагола, действующая для всех лиц и чисел.
 Форма первого лица для глагола говорить — räägiN. Убрав окончание –N получаем основу räägi, и по аналогии с уже знакомым глаголом olema формируем отрицание для всех лиц.
 
-<p>
-    <table>
-        <tr>
-            <td>Mina</td>
-            <td rowspan="6">+ ei ole</td>
-        </tr>
-        <tr>
-            <td>Sina</td>
-        </tr>
-        <tr>
-            <td>Tema</td>
-        </tr>
-        <tr>
-            <td>Meie</td>
-        </tr>
-        <tr>
-            <td>Teie</td>
-        </tr>
-        <tr>
-            <td>Nemad</td>
-        </tr>
-    </table>
-</p>
+<table>
+    <tr>
+        <td>Mina</td>
+        <td rowspan="6">+ ei ole</td>
+    </tr>
+    <tr>
+        <td>Sina</td>
+    </tr>
+    <tr>
+        <td>Tema</td>
+    </tr>
+    <tr>
+        <td>Meie</td>
+    </tr>
+    <tr>
+        <td>Teie</td>
+    </tr>
+    <tr>
+        <td>Nemad</td>
+    </tr>
+</table>
 
-<p>
-    <table>
-        <tr>
-            <td>Mina</td>
-            <td rowspan="6">+ ei räägi</td>
-        </tr>
-        <tr>
-            <td>Sina</td>
-        </tr>
-        <tr>
-            <td>Tema</td>
-        </tr>
-        <tr>
-            <td>Meie</td>
-        </tr>
-        <tr>
-            <td>Teie</td>
-        </tr>
-        <tr>
-            <td>Nemad</td>
-        </tr>
-    </table>
-</p>
+<table>
+    <tr>
+        <td>Mina</td>
+        <td rowspan="6">+ ei räägi</td>
+    </tr>
+    <tr>
+        <td>Sina</td>
+    </tr>
+    <tr>
+        <td>Tema</td>
+    </tr>
+    <tr>
+        <td>Meie</td>
+    </tr>
+    <tr>
+        <td>Teie</td>
+    </tr>
+    <tr>
+        <td>Nemad</td>
+    </tr>
+</table>
 
 ##### Näide. Пример
 
@@ -169,38 +165,36 @@ Jääge hiljaks! Ärge jääge hiljaks! Опоздайте! Не опаздыв�
 Отрицание полного прошедшего времени образуется при помощи отрицательной формы ei ole и причастия на -nud. 
 Ниже в таблице можно увидеть изменение глагола любить по лицам и числам в прошедшем времени.
 
-<p>
-    <table>
-        <tr>
-            <th>Утвердительная форма<br>Jaatav vorm</th>
-            <th>Отрицательная форма<br>Eitav vorm</th>
-        </tr>
-        <tr>
-            <td>ma <b><u>olen</u></b> armastanud</td>
-            <td>ma <b><u>ei ole</u></b> armastanud</td>
-        </tr>
-        <tr>
-            <td>sa <b><u>oled</u></b> armastanud</td>
-            <td>sa <b><u>ei ole</u></b> armastanud</td>
-        </tr>
-        <tr>
-            <td>ta <b><u>on</u></b> armastanud</td>
-            <td>ta <b><u>ei ole</u></b> armastanud</td>
-        </tr>
-        <tr>
-            <td>me <b><u>oleme</u></b> armastanud</td>
-            <td>me <b><u>ei ole</u></b> armastanud</td>
-        </tr>
-        <tr>
-            <td>te <b><u>olete</u></b> armastanud</td>
-            <td>te <b><u>ei ole</u></b> armastanud</td>
-        </tr>
-        <tr>
-            <td>nad <b><u>on</u></b> armastanud</td>
-            <td>nad <b><u>ei ole</u></b> armastanud</td>
-        </tr>
-    </table>
-</p>
+<table>
+    <tr>
+        <th>Утвердительная форма<br>Jaatav vorm</th>
+        <th>Отрицательная форма<br>Eitav vorm</th>
+    </tr>
+    <tr>
+        <td>ma <b><u>olen</u></b> armastanud</td>
+        <td>ma <b><u>ei ole</u></b> armastanud</td>
+    </tr>
+    <tr>
+        <td>sa <b><u>oled</u></b> armastanud</td>
+        <td>sa <b><u>ei ole</u></b> armastanud</td>
+    </tr>
+    <tr>
+        <td>ta <b><u>on</u></b> armastanud</td>
+        <td>ta <b><u>ei ole</u></b> armastanud</td>
+    </tr>
+    <tr>
+        <td>me <b><u>oleme</u></b> armastanud</td>
+        <td>me <b><u>ei ole</u></b> armastanud</td>
+    </tr>
+    <tr>
+        <td>te <b><u>olete</u></b> armastanud</td>
+        <td>te <b><u>ei ole</u></b> armastanud</td>
+    </tr>
+    <tr>
+        <td>nad <b><u>on</u></b> armastanud</td>
+        <td>nad <b><u>ei ole</u></b> armastanud</td>
+    </tr>
+</table>
 
 Ну что, вы большие молодцы. Сегодня получился очень насыщенный урок и чтобы наши правила не превратились в голове в слошной винегрет, нужно срочно закреплять это все на практике. Этим мы и займемся в заданиях к этому уроку. А пока на закуску вам несколько новых фраз благодарности и извинений.
 

@@ -13,18 +13,18 @@ Inimene on ukse taga. Tema on ukse taga. Keegi on ukse taga.
 Местоимений, конечно, много.  Возьмем несколько подвидов, и рассмотрим особенности их склонения.
 С некоторыми мы уже знакомы с самых первых наших уроков. Такие, например, как личные местоимения единственного и множественного числа у нас, я думаю, уже доведены до автоматизма.
 
-### Личные местоимения. Isikulised asesõnad.
+### Личные местоимения. Isikulised asesõnad
 
 <table>
     <tr>
-        <td>
+        <th>
             Лицо
-        </td>
-        <td>Единственное
+        </th>
+        <th>Единственное
             Число
-        </td>
-        <td>Множественное
-            Число</td>
+        </th>
+        <th>Множественное
+            Число</th>
     <tr>
         <td>1</td>
         <td>Я Mina (ma)</td>
@@ -51,10 +51,11 @@ Inimene on ukse taga. Tema on ukse taga. Keegi on ukse taga.
 
 <table>
     <tr>
-        <td>1 лицо ед.ч.</td>
-        <td>перевод</td>
-        <td>2 лицо ед.ч.</td>
-        <td>3 лицо ед.ч.</td>
+        <th/>
+        <th>1 лицо ед.ч.</th>
+        <th>перевод</th>
+        <th>2 лицо ед.ч.</th>
+        <th>3 лицо ед.ч.</th>
     </tr>
     <tr>
         <td>nimetav</td>
@@ -158,9 +159,10 @@ Inimene on ukse taga. Tema on ukse taga. Keegi on ukse taga.
 
 <table>
     <tr>
-        <td>1 лицо мн.ч.</td>
-        <td>2 лицо мн.ч.</td>
-        <td>3 лицо мн.ч.</td>
+        <th/>
+        <th>1 лицо мн.ч.</th>
+        <th>2 лицо мн.ч.</th>
+        <th>3 лицо мн.ч.</th>
     </tr>
     <tr>
         <td>nimetav</td>
