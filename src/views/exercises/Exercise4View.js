@@ -3,7 +3,7 @@ import { translate } from 'react-i18next'
 import MarkdownPage from '../components/MarkdownPage'
 
 const source = `
-Harjutus 1.
+### Harjutus 1.
 Так как урок 4 был посвящен несрабатыванию словарного запаса, то продолжаем тренировать грамматику глагола. Очередная партия новых глаголов для разминки. Помните, спрягаем их в настоящем и прошедшего времени, плюс повелительное наклонение единственного и множественного числа. Ну и конечно не забываем про отрицание этих всех форм. В этот раз я не буду выдавать вам все это в ответах, выпишу лишь только некоторые формы подсказки. Ну и небольшое замечание, некоторые формы этих глаголов будут коряво звучать при переводе. Не обращайте на это внимание, нам главное отработать схему, что от чего и как образуется!
 Я где-то читала об одном исследовании,  в котором говорилось, что в обычной повседневной речи мы используем всего порядка 50-60 глаголов. Мы можно сказать уже на полпути к этому количеству, так что ловите очередную десятку распространенных глаголов от меня: 
 
@@ -28,11 +28,11 @@ http://www.filosoft.ee/index.html
 
 Рис. 4
 
-Harjutus 2. 
+### Harjutus 2. 
 Исправьте ошибки. В каждом предложении по одной ошибки.
 Saake tuttavaks. See oleb minu hea kolleeg Tiina. Tema on ka õppetaja. Ma õpid eesti keelt kaks kuud. Mina pärit olen Eestist. Ma olen Eestis sünninud. Tüdruk loete praegu ilusat raamatut. Lugege Sina ka! Ma arvab, et see raamat on hea. Poiss ei armastab matemaatikat. 
 
-Harjutus 3.
+### Harjutus 3.
 Раскройте скобки, поставив глагол в правильную форму.
 Kus sa .......... (elama)? 2. Ma .......... (elama) Tartus. 3. Kas sinu sõber .......... (elama) ka Tartus, või ta .......... (elama) ja .......... (töötama) Tallinnas. 4. Millal sa .......... (tulema)? 5. Õpilased ei .......... (õppima) praegu tunnis. 6. Õpilased ........... (mängima), sest õpetaja .......... (magama). 7. Õhtul .......... (lugema) tavaliselt naine raamatut. 8. Kas te .......... (sõitma) muuseumisse homme? 9. Nad .......... (arvama), et me .......... (võtma) takso. 10. Sinu sõber ei .......... (teadma), et Sa nii hästi .......... (oskama) inglise keelt.
 `

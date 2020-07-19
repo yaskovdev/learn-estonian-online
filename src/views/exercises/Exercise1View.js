@@ -3,7 +3,7 @@ import { translate } from 'react-i18next'
 import MarkdownPage from '../components/MarkdownPage'
 
 const source = `
-Harjutus 1. 
+### Harjutus 1. 
 Закрепляем правила чтения по-эстонски. 
 1. keda tunned – keeda suppi (кого знаешь – свари суп)
 2. pole minu asi – minu poole (не мое дело – в мою сторону)
@@ -16,7 +16,7 @@ Harjutus 1.
 9. ära kisu! – kiisu nimi (не трожь! – имя кошки)
 10. esimesest klassist – klaasist uks (из первого класса – дверь из стекла)
 
-Harjutus 2.
+### Harjutus 2.
 
 Найдите правильный перевод
 
