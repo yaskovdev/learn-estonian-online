@@ -3,11 +3,11 @@ import { translate } from 'react-i18next'
 import MarkdownPage from '../components/MarkdownPage'
 
 const source = `
-### Harjutus 1.
+### Harjutus 1
 Ознакомьтесь с материалом по указании времени в разделе тексты (текст 4) и напишите словами время:
 
 
-### Harjutus 2.
+### Harjutus 2
 Выберите нужный предлог-послелог. Правильным будет только один вариант из трех:
 1. Helistage kas .......... (enne, jooksul, ümber) või ......... (saadik, pärast, alates) lõunat.
 2. Ära minu .......... (peale, järgi, pärast) muretse!
